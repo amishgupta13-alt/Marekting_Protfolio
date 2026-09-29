@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Amish Gupta — BBA student focused on Social Media Marketing, Digital Marketing, Product Marketing and Marketing Analytics." />
+  <meta name="theme-color" content="#16283d" />
+  <title>Amish Gupta — Social Media & Digital Marketing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2316283d'/%3E%3Ctext x='50' y='63' text-anchor='middle' font-family='Arial' font-size='38' font-weight='700' fill='%23f5ead7'%3EAG%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css" />
+  <style>.contact-grid-single{grid-template-columns:minmax(0,1fr);justify-items:end}.contact-grid-single .contact-panel{width:min(100%,680px)}</style>
+
+<style>
+/* Final layout refinement: compact experience cards + visible 3D depth */
+.experience-card {
+  width: min(100%, 1040px) !important;
+  margin-inline: auto !important;
+  padding: 30px !important;
+  gap: 30px !important;
+  min-height: 0 !important;
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+.experience-card + .experience-card {
+  margin-top: 22px !important;
+}
+.exp-side {
+  min-width: 260px !important;
+  padding: 28px 25px !important;
+  border-radius: 4px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
+.exp-mark {
+  font-size: clamp(90px, 9vw, 118px) !important;
+  line-height: .9 !important;
+  opacity: .30 !important;
+  letter-spacing: -0.08em !important;
+}
+.exp-body {
+  padding: 8px 10px !important;
+  transform: translateZ(18px);
+}
+.exp-body h3 {
+  margin-bottom: 28px !important;
+}
+.exp-columns {
+  gap: 42px !important;
+}
+.exp-columns > div {
+  min-width: 0;
+}
+.exp-columns h4 {
+  margin-bottom: 14px !important;
+}
+.exp-columns ul {
+  padding-left: 20px !important;
+  margin: 0 !important;
+}
+.exp-columns li {
+  margin-bottom: 10px !important;
+  line-height: 1.55 !important;
+}
+.experience-card:hover {
+  transform: perspective(1200px) translateY(-6px) rotateX(1.5deg) rotateY(-1.5deg) !important;
+  box-shadow: 0 24px 48px rgba(0,0,0,.16) !important;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.tool-card,
+.project-card,
+.skill-card,
+.education-card,
+.cert-card {
+  transform-style: preserve-3d;
+}
+.tool-card {
+  perspective: 1000px;
+  transition: transform .18s ease-out, box-shadow .25s ease;
+}
+.tool-card > * {
+  transform: translateZ(16px);
+}
+.tool-card:hover,
+.project-card:hover,
+.skill-card:hover,
+.education-card:hover,
+.cert-card:hover {
+  transform: translateY(-6px) rotateX(1deg) rotateY(-1deg);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+@media (max-width: 900px) {
+  .experience-card { width: 100% !important; padding: 22px !important; }
+  .exp-side { min-width: 0 !important; padding: 22px !important; }
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('[data-tilt]').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - 0.5;
+      const y = (e.clientY - r.top) / r.height - 0.5;
+      card.style.transform = `perspective(1000px) rotateX(${(-y * 7).toFixed(2)}deg) rotateY(${(x * 9).toFixed(2)}deg) translateY(-6px)`;
+    });
+    card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+  });
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('[data-tilt]');
+  cards.forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - 0.5;
+      const y = (e.clientY - r.top) / r.height - 0.5;
+      card.style.transform =
+        `perspective(1000px) rotateX(${(-y * 8).toFixed(2)}deg) rotateY(${(x * 10).toFixed(2)}deg) translateY(-7px)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  });
+});
+</script>
+
+
+<style id="portfolio-final-refinements">
+/* WORK EXPERIENCE — compact card, wider identity panel, better spacing */
+#experience .experience-card {
+  width: min(100%, 1060px) !important;
+  max-width: 1060px !important;
+  margin: 0 auto 26px !important;
+  padding: 0 !important;
+  min-height: 0 !important;
+  display: grid !important;
+  grid-template-columns: 285px minmax(0, 1fr) !important;
+  align-items: stretch !important;
+  overflow: hidden !important;
+  border-radius: 24px !important;
+  transform-style: preserve-3d !important;
+  transition: transform .35s ease, box-shadow .35s ease !important;
+}
+#experience .experience-card:last-child {
+  margin-bottom: 0 !important;
+}
+#experience .experience-card:hover {
+  transform: translateY(-6px) rotateX(1deg) rotateY(-1deg) !important;
+}
+#experience .experience-card .exp-side {
+  min-height: 325px !important;
+  padding: 34px 32px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
+#experience .experience-card .exp-mark {
+  font-size: 66px !important;
+  line-height: .9 !important;
+  letter-spacing: -3px !important;
+  opacity: .22 !important;
+}
+#experience .experience-card .exp-date {
+  font-size: 13px !important;
+  line-height: 1.35 !important;
+  letter-spacing: 1.5px !important;
+}
+#experience .experience-card .exp-body {
+  padding: 34px 42px 36px !important;
+  min-width: 0 !important;
+}
+#experience .experience-card .exp-body > h3 {
+  margin: 10px 0 28px !important;
+  font-size: clamp(32px, 3vw, 44px) !important;
+  line-height: 1.05 !important;
+}
+#experience .experience-card .exp-columns {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.15fr) minmax(210px, .85fr) !important;
+  gap: 52px !important;
+}
+#experience .experience-card .exp-columns h4 {
+  margin: 0 0 15px !important;
+}
+#experience .experience-card .exp-columns ul {
+  margin: 0 !important;
+  padding-left: 19px !important;
+}
+#experience .experience-card .exp-columns li {
+  margin: 0 0 11px !important;
+  line-height: 1.5 !important;
+}
+#experience .experience-card .exp-columns li:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Keep skills as text/cards only — no images. */
+#skills .skill-card img {
+  display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 820px) {
+  #experience .experience-card {
+    grid-template-columns: 220px minmax(0, 1fr) !important;
+  }
+  #experience .experience-card .exp-side {
+    min-height: 300px !important;
+    padding: 28px 24px !important;
+  }
+  #experience .experience-card .exp-body {
+    padding: 30px !important;
+  }
+  #experience .experience-card .exp-columns {
+    grid-template-columns: 1fr !important;
+    gap: 26px !important;
+  }
+}
+@media (max-width: 620px) {
+  #experience .experience-card {
+    grid-template-columns: 1fr !important;
+  }
+  #experience .experience-card .exp-side {
+    min-height: 190px !important;
+  }
+}
+</style>
+
+
+<style id="experience-size-fix">
+#experience .experience-card {
+  box-sizing: border-box !important;
+  width: min(100%, 1040px) !important;
+  max-width: 1040px !important;
+  grid-template-columns: 300px minmax(0, 1fr) !important;
+  margin-bottom: 22px !important;
+}
+#experience .experience-card .exp-side {
+  min-height: 300px !important;
+  padding: 30px 30px !important;
+}
+#experience .experience-card .exp-body {
+  padding: 30px 38px 32px !important;
+}
+#experience .experience-card .exp-body > h3 {
+  font-size: clamp(30px, 2.8vw, 40px) !important;
+  margin: 8px 0 24px !important;
+}
+#experience .experience-card .exp-columns {
+  gap: 42px !important;
+}
+#experience .experience-card .exp-columns li {
+  margin-bottom: 9px !important;
+  line-height: 1.45 !important;
+}
+#experience .experience-card .exp-mark {
+  font-size: 72px !important;
+}
+</style>
+
+
+<style id="portfolio-v6-fixes">
+/* V6: text-led skills/tools; compact, balanced experience card */
+#skills .skill-card img, #tools .tool-card img { display:none !important; }
+#tools .tool-card > div { margin-top:0 !important; }
+.experience-card {
+  width: min(100%, 1100px) !important;
+  margin-inline: auto !important;
+  padding: 34px 38px !important;
+  grid-template-columns: 235px minmax(0,1fr) !important;
+  gap: 42px !important;
+  min-height: 0 !important;
+}
+.exp-side {
+  min-height: 300px !important;
+  padding: 34px !important;
+}
+.exp-body { padding: 10px 0 !important; }
+.exp-columns { grid-template-columns: repeat(2, minmax(0,1fr)) !important; gap: 52px !important; }
+.exp-columns h4 { margin-bottom: 16px !important; }
+.exp-columns li { margin-bottom: 12px !important; line-height: 1.6 !important; }
+@media (max-width: 900px) {
+  .experience-card { grid-template-columns: 1fr !important; padding: 26px !important; }
+  .exp-side { min-height: 220px !important; }
+  .exp-columns { grid-template-columns: 1fr !important; gap: 28px !important; }
+}
+</style>
+
+<style id="no-tool-images-and-card-layout">
+  /* NO IMAGES in Skills or Tools */
+  #skills img,
+  #tools img {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Tools: compact, balanced cards with no reserved icon/image area */
+  #tools .tools-grid {
+    align-items: stretch !important;
+  }
+  #tools .tool-card {
+    min-height: 240px !important;
+    height: auto !important;
+    padding: 30px 28px !important;
+    display: flex !important;
+    align-items: stretch !important;
+    transform-style: preserve-3d !important;
+  }
+  #tools .tool-card > div {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: translateZ(16px);
+  }
+  #tools .tool-card small {
+    display: block !important;
+    margin: 0 0 14px !important;
+  }
+  #tools .tool-card h3 {
+    margin: 0 0 12px !important;
+  }
+  #tools .tool-card p {
+    margin: 0 0 18px !important;
+    line-height: 1.55 !important;
+  }
+  #tools .tool-card b {
+    display: block !important;
+    margin-top: auto !important;
+  }
+
+  /* Skills: text-only cards; no image spacing */
+  #skills .skill-card {
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 26px !important;
+  }
+
+  /* Keep work-experience proportions compact and readable */
+  #experience .experience-card {
+    width: min(100%, 1040px) !important;
+    max-width: 1040px !important;
+  }
+
+  @media (max-width: 900px) {
+    #tools .tool-card {
+      min-height: 0 !important;
+      padding: 26px 24px !important;
+    }
+  }
+</style>
+
+</head>
+<body>
+  <div class="progress-line" id="progressLine"></div>
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="index.html#home" aria-label="Amish Gupta home"><span>AG</span><b>Amish Gupta</b></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav">
+      <a href="index.html#about">About</a><a href="index.html#experience">Experience</a><a href="index.html#education">Education</a><a href="index.html#projects">Projects</a><a href="index.html#skills">Skills</a><a href="index.html#tools">Tools</a><a href="certificates.html" class="active">Certifications</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section cream" id="certifications">
+          <div class="section-head reveal"><span class="section-number">08</span><div><p class="kicker">CERTIFICATIONS</p><h2>Credentials that<br><em>support the story.</em></h2></div></div>
+          <div class="cert-grid">
+            <article class="cert-card reveal"><div class="cert-image"><img src="assets/certificates/hubspot-digital-marketing.png" alt="HubSpot Digital Marketing Certified certificate"></div><div class="cert-body"><span>HUBSPOT ACADEMY</span><h3>Digital Marketing Certified</h3><p>Knowledge of digital marketing practices including search-friendly content, website optimization, social media strategy, video engagement, advertising, and measuring marketing results.</p><b>COMPLETED · VALID MAY 19, 2026 — JUN 18, 2027</b></div></article>
+            <article class="cert-card reveal delay-1"><div class="cert-image"><img src="assets/certificates/google-prepare-data-exploration.png" alt="Google Coursera Prepare Data for Exploration certificate"></div><div class="cert-body"><span>GOOGLE / COURSERA</span><h3>Prepare Data for Exploration</h3><p>Course certificate demonstrating completion of the supplied Google/Coursera data exploration credential.</p><b>COMPLETED</b></div></article>
+            <article class="cert-card reveal delay-2"><div class="cert-image"><img src="assets/certificates/deloitte-data-analytics.png" alt="Deloitte Data Analytics Job Simulation certificate"></div><div class="cert-body"><span>DELOITTE / FORAGE</span><h3>Data Analytics Job Simulation</h3><p>Completed practical tasks in data analysis and forensic technology.</p><b>COMPLETED · JULY 11, 2025</b></div></article>
+            <article class="cert-card reveal"><div class="cert-image"><img src="assets/certificates/forage-data-labeling.png" alt="Forage Data Labeling Job Simulation certificate"></div><div class="cert-body"><span>FORAGE</span><h3>Data Labeling Job Simulation</h3><p>Completed practical tasks in batch labeling, PII awareness, review, quality control and iteration.</p><b>COMPLETED · JANUARY 2, 2026</b></div></article>
+          </div>
+        </section>
+  </main>
+
+  <footer class="footer"><div><a class="brand" href="index.html#home"><span>AG</span><b>Amish Gupta</b></a><p>Social Media, Digital Marketing & Product Marketing.</p></div><div class="footer-links"><a href="https://github.com/amishgupta13-alt" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/amish-gupta-92267836a/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="mailto:amishgupta13@gmail.com">Email</a></div><small>© <span id="year"></span> Amish Gupta</small></footer>
+  <script src="script.js"></script>
+</body>
+</html>
