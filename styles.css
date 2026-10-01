@@ -1723,3 +1723,114 @@ ul{
         transition:none
     }
 }
+/* ==========================================
+   FINAL MOBILE OVERFLOW FIX
+   WORK EXPERIENCE ONLY
+   ========================================== */
+
+@media screen and (max-width: 850px) {
+
+    #experience {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    #experience .experience-card {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        overflow: hidden !important;
+    }
+
+    #experience .exp-side {
+        display: flex !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+    }
+
+    #experience .exp-body {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+    }
+
+    #experience .exp-columns {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    #experience .exp-columns > div {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+        margin-bottom: 30px !important;
+    }
+
+    #experience .exp-columns ul {
+        width: auto !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+        padding-left: 20px !important;
+        margin-right: 0 !important;
+    }
+
+    #experience .exp-columns li {
+        width: auto !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+        overflow-wrap: anywhere !important;
+        word-break: break-word !important;
+    }
+
+    #experience .exp-body h3,
+    #experience .exp-body p,
+    #experience .exp-body span,
+    #experience .exp-body strong {
+        max-width: 100% !important;
+        overflow-wrap: anywhere !important;
+        word-break: break-word !important;
+    }
+}
+
+
+@media screen and (max-width: 560px) {
+
+    #experience .experience-card {
+        border-radius: 22px !important;
+    }
+
+    #experience .exp-side {
+        min-height: 150px !important;
+        padding: 28px !important;
+    }
+
+    #experience .exp-body {
+        padding: 30px 24px !important;
+    }
+
+    #experience .exp-body h3 {
+        font-size: 32px !important;
+        line-height: 1.05 !important;
+    }
+
+    #experience .exp-columns {
+        margin-top: 28px !important;
+    }
+}
