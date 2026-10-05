@@ -11,8 +11,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2316283d'/%3E%3Ctext x='50' y='63' text-anchor='middle' font-family='Arial' font-size='38' font-weight='700' fill='%23f5ead7'%3EAG%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css" />
-  <style>.contact-grid-single{grid-template-columns:minmax(0,1fr);justify-items:end}.contact-grid-single .contact-panel{width:min(100%,680px)}</style>
-
+  <style>
+.contact-grid-single{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:stretch;gap:32px}
+.contact-form-panel{width:100%;background:var(--paper);color:var(--ink);padding:34px;border-radius:24px;box-shadow:var(--shadow)}
+.contact-form{display:grid;gap:20px}
+.contact-form-field{display:grid;gap:8px}
+.contact-form-field label{font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--navy)}
+.contact-form-field input,.contact-form-field textarea{width:100%;box-sizing:border-box;border:0;border-bottom:1px solid rgba(22,40,61,.22);background:transparent;color:var(--ink);padding:12px 0;font:inherit;outline:none}
+.contact-form-field textarea{min-height:130px;resize:vertical}
+.contact-form-field input:focus,.contact-form-field textarea:focus{border-bottom-color:var(--orange)}
+.contact-form-field input::placeholder,.contact-form-field textarea::placeholder{color:#89929c}
+.contact-form .btn{width:max-content;border:0;cursor:pointer}
+@media (max-width:900px){.contact-grid-single{grid-template-columns:1fr}}
+</style>
 <style>
 /* Final layout refinement: compact experience cards + visible 3D depth */
 .experience-card {
@@ -358,13 +369,95 @@ document.addEventListener('DOMContentLoaded', () => {
 
 </head>
 <body>
-  <div class="progress-line" id="progressLine"></div>
-  <header class="site-header" id="siteHeader">
-    <a class="brand" href="index.html#home" aria-label="Amish Gupta home"><span>AG</span><b>Amish Gupta</b></a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
-    <nav class="nav" id="nav">
-      <a href="index.html#about">About</a><a href="index.html#experience">Experience</a><a href="index.html#education">Education</a><a href="index.html#projects">Projects</a><a href="index.html#skills">Skills</a><a href="index.html#tools">Tools</a><a href="certificates.html">Certifications</a><a href="blog.html">Blog</a><a href="contact.html" class="active">Contact</a>
-    </nav>
+  <div class="contact-grid contact-grid-single reveal">
+
+  <div class="contact-form-panel">
+    <p class="kicker">SEND A MESSAGE</p>
+    <h3>Let's start a conversation.</h3>
+
+    <form id="contactForm" class="contact-form">
+
+      <div class="contact-form-field">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name"
+               placeholder="Your name" required>
+      </div>
+
+      <div class="contact-form-field">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email"
+               placeholder="your@email.com" required>
+      </div>
+
+      <div class="contact-form-field">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject"
+               placeholder="What would you like to discuss?" required>
+      </div>
+
+      <div class="contact-form-field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message"
+                  placeholder="Write your message..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">
+        <span>Send Message</span>
+      </button>
+
+    </form>
+  </div>
+
+  <aside class="contact-panel">
+    <p class="kicker">LET'S TALK</p>
+    <h3>Have a project, opportunity, or idea?</h3>
+
+    <div class="contact-list">
+      <a href="mailto:amishgupta13@gmail.com">
+        <span>@</span>
+        <div>
+          <small>EMAIL</small>
+          <b>amishgupta13@gmail.com</b>
+        </div>
+      </a>
+
+      <a href="tel:+919920104027">
+        <span>↗</span>
+        <div>
+          <small>PHONE</small>
+          <b>9920104027</b>
+        </div>
+      </a>
+
+      <div>
+        <span>⌖</span>
+        <div>
+          <small>LOCATION</small>
+          <b>Mumbai, India</b>
+        </div>
+      </div>
+
+      <a href="https://www.linkedin.com/in/amish-gupta-92267836a/"
+         target="_blank" rel="noopener noreferrer">
+        <span>in</span>
+        <div>
+          <small>LINKEDIN</small>
+          <b>View LinkedIn Profile</b>
+        </div>
+      </a>
+
+      <a href="https://github.com/amishgupta13-alt"
+         target="_blank" rel="noopener noreferrer">
+        <span>GH</span>
+        <div>
+          <small>GITHUB</small>
+          <b>View GitHub Profile</b>
+        </div>
+      </a>
+    </div>
+  </aside>
+
+</div>
   </header>
 
   <main>
