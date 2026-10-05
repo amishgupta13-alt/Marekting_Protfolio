@@ -369,110 +369,113 @@ document.addEventListener('DOMContentLoaded', () => {
 
 </head>
 <body>
-  <div class="contact-grid contact-grid-single reveal">
-
-  <div class="contact-form-panel">
-    <p class="kicker">SEND A MESSAGE</p>
-    <h3>Let's start a conversation.</h3>
-
-    <form id="contactForm" class="contact-form">
-
-      <div class="contact-form-field">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name"
-               placeholder="Your name" required>
-      </div>
-
-      <div class="contact-form-field">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email"
-               placeholder="your@email.com" required>
-      </div>
-
-      <div class="contact-form-field">
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" name="subject"
-               placeholder="What would you like to discuss?" required>
-      </div>
-
-      <div class="contact-form-field">
-        <label for="message">Message</label>
-        <textarea id="message" name="message"
-                  placeholder="Write your message..." required></textarea>
-      </div>
-
-      <button type="submit" class="btn btn-primary">
-        <span>Send Message</span>
-      </button>
-
-    </form>
-  </div>
-
-  <aside class="contact-panel">
-    <p class="kicker">LET'S TALK</p>
-    <h3>Have a project, opportunity, or idea?</h3>
-
-    <div class="contact-list">
-      <a href="mailto:amishgupta13@gmail.com">
-        <span>@</span>
-        <div>
-          <small>EMAIL</small>
-          <b>amishgupta13@gmail.com</b>
-        </div>
-      </a>
-
-      <a href="tel:+919920104027">
-        <span>↗</span>
-        <div>
-          <small>PHONE</small>
-          <b>9920104027</b>
-        </div>
-      </a>
-
-      <div>
-        <span>⌖</span>
-        <div>
-          <small>LOCATION</small>
-          <b>Mumbai, India</b>
-        </div>
-      </div>
-
-      <a href="https://www.linkedin.com/in/amish-gupta-92267836a/"
-         target="_blank" rel="noopener noreferrer">
-        <span>in</span>
-        <div>
-          <small>LINKEDIN</small>
-          <b>View LinkedIn Profile</b>
-        </div>
-      </a>
-
-      <a href="https://github.com/amishgupta13-alt"
-         target="_blank" rel="noopener noreferrer">
-        <span>GH</span>
-        <div>
-          <small>GITHUB</small>
-          <b>View GitHub Profile</b>
-        </div>
-      </a>
-    </div>
-  </aside>
-
-</div>
+  <div class="progress-line" id="progressLine"></div>
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="index.html#home" aria-label="Amish Gupta home"><span>AG</span><b>Amish Gupta</b></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav">
+      <a href="index.html#about">About</a><a href="index.html#experience">Experience</a><a href="index.html#education">Education</a><a href="index.html#projects">Projects</a><a href="index.html#skills">Skills</a><a href="index.html#tools">Tools</a><a href="certificates.html">Certifications</a><a href="blog.html">Blog</a><a href="contact.html" class="active">Contact</a>
+    </nav>
   </header>
-
   <main>
     <section class="section navy contact-section" id="contact">
-          <div class="section-head light reveal"><span class="section-number">09</span><div><p class="kicker">CONTACT</p><h2>Let's create something<br><em>worth sharing.</em></h2></div></div>
-          <div class="contact-grid contact-grid-single reveal">
-            <aside class="contact-panel">
-              <p class="kicker">LET'S TALK</p>
-              <h3>Have a project, opportunity, or idea?</h3>
-              <div class="contact-list"><a href="mailto:amishgupta13@gmail.com"><span>@</span><div><small>EMAIL</small><b>amishgupta13@gmail.com</b></div></a><a href="tel:+919920104027"><span>↗</span><div><small>PHONE</small><b>9920104027</b></div></a><div><span>⌖</span><div><small>LOCATION</small><b>Mumbai, India</b></div></div><a href="https://www.linkedin.com/in/amish-gupta-92267836a/" target="_blank" rel="noopener noreferrer"><span>in</span><div><small>LINKEDIN</small><b>View LinkedIn Profile</b></div></a><a href="https://github.com/amishgupta13-alt" target="_blank" rel="noopener noreferrer"><span>GH</span><div><small>GITHUB</small><b>View GitHub Profile</b></div></a></div>
-            </aside>
-          </div>
-        </section>
-  </main>
+      <div class="section-head light reveal">
+        <span class="section-number">09</span>
+        <div>
+          <p class="kicker">CONTACT</p>
+          <h2>Let's create something<br><em>worth sharing.</em></h2>
+        </div>
+      </div>
 
+      <div class="contact-grid contact-grid-single reveal">
+
+        <aside class="contact-panel">
+          <p class="kicker">LET'S TALK</p>
+          <h3>Have a project, opportunity, or idea?</h3>
+
+          <div class="contact-list">
+            <a href="mailto:amishgupta13@gmail.com">
+              <span>@</span>
+              <div>
+                <small>EMAIL</small>
+                <b>amishgupta13@gmail.com</b>
+              </div>
+            </a>
+
+            <a href="tel:+919920104027">
+              <span>↗</span>
+              <div>
+                <small>PHONE</small>
+                <b>9920104027</b>
+              </div>
+            </a>
+
+            <div>
+              <span>⌖</span>
+              <div>
+                <small>LOCATION</small>
+                <b>Mumbai, India</b>
+              </div>
+            </div>
+
+            <a href="https://www.linkedin.com/in/amish-gupta-92267836a/"
+               target="_blank" rel="noopener noreferrer">
+              <span>in</span>
+              <div>
+                <small>LINKEDIN</small>
+                <b>View LinkedIn Profile</b>
+              </div>
+            </a>
+
+            <a href="https://github.com/amishgupta13-alt"
+               target="_blank" rel="noopener noreferrer">
+              <span>GH</span>
+              <div>
+                <small>GITHUB</small>
+                <b>View GitHub Profile</b>
+              </div>
+            </a>
+          </div>
+        </aside>
+
+        <div class="contact-form-panel">
+          <p class="kicker">SEND A MESSAGE</p>
+          <h3>Let's start a conversation.</h3>
+
+          <form id="contactForm" class="contact-form">
+            <div class="contact-form-field">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name"
+                     placeholder="Your name" required>
+            </div>
+
+            <div class="contact-form-field">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email"
+                     placeholder="your@email.com" required>
+            </div>
+
+            <div class="contact-form-field">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject"
+                     placeholder="What would you like to discuss?" required>
+            </div>
+
+            <div class="contact-form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message"
+                        placeholder="Write your message..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              <span>Send Message</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
   <footer class="footer"><div><a class="brand" href="index.html#home"><span>AG</span><b>Amish Gupta</b></a><p>Social Media, Digital Marketing & Product Marketing.</p></div><div class="footer-links"><a href="https://github.com/amishgupta13-alt" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/amish-gupta-92267836a/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="mailto:amishgupta13@gmail.com">Email</a></div><small>© <span id="year"></span> Amish Gupta</small></footer>
   <script src="script.js"></script>
 </body>
